@@ -255,6 +255,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (= 1.0.0.pre2)
   capistrano (~> 3.4.0)
+  capistrano-bundler (~> 1.2)
   capistrano-rails (~> 1.2)
   capistrano-rvm
   capistrano-unicorn-nginx (~> 3.2.0)
