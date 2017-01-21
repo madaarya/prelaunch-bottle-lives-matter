@@ -9,6 +9,7 @@ gem 'pg'
 gem 'rails', '4.2.5.2'
 gem 'unicorn'
 gem 'therubyracer',  platforms: :ruby
+gem "dotenv-rails"
 
 
 # Gems used only for assets and not required
@@ -24,7 +25,6 @@ group :development, :test do
   gem 'rspec-rails', '3.4.2'
   gem 'rspec-mocks', '3.4.1'
   gem 'test-unit', '~> 3.0'
-  gem "dotenv-rails"
 end
 
 group :development do
