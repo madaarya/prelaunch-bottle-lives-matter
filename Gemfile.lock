@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/madaarya/capistrano-unicorn-nginx.git
+  revision: d428035a5cc62f76c059219cf69f8709d6563cf8
+  specs:
+    capistrano-unicorn-nginx (4.0.0)
+      capistrano (>= 3.1)
+      sshkit (>= 1.2.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -70,9 +78,8 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
-    capistrano-unicorn-nginx (3.2.0)
-      capistrano (>= 3.1)
-      sshkit (>= 1.2.0)
+    capistrano3-delayed-job (1.7.2)
+      capistrano (~> 3.0, >= 3.0.0)
     coderay (1.1.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
@@ -82,6 +89,7 @@ GEM
       execjs
     coffee-script-source (1.10.0)
     concurrent-ruby (1.0.1)
+    daemons (1.2.4)
     delayed_job (4.0.6)
       activesupport (>= 3.0, < 5.0)
     delayed_job_active_record (4.0.3)
@@ -258,8 +266,10 @@ DEPENDENCIES
   capistrano-bundler (~> 1.2)
   capistrano-rails (~> 1.2)
   capistrano-rvm
-  capistrano-unicorn-nginx (~> 3.2.0)
+  capistrano-unicorn-nginx!
+  capistrano3-delayed-job (~> 1.0)
   coffee-rails (~> 4.1.0)
+  daemons
   delayed_job_active_record (~> 4.0.3)
   devise
   dotenv-rails

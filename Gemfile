@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 gem 'activeadmin', '1.0.0.pre2'
 gem 'delayed_job_active_record', '~> 4.0.3'
+gem 'daemons'
 gem 'devise'
 gem 'pg'
 gem 'rails', '4.2.5.2'
@@ -33,7 +34,8 @@ group :development do
   gem 'capistrano-rails', '~> 1.2'
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rvm'
-  gem 'capistrano-unicorn-nginx', '~> 3.2.0'
+  gem 'capistrano-unicorn-nginx', github: 'madaarya/capistrano-unicorn-nginx'
+  gem 'capistrano3-delayed-job', '~> 1.0'
 end
 
 # To use ActiveModel has_secure_password
