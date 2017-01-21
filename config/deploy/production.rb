@@ -3,6 +3,7 @@ set :branch, "master"
 set :rails_env, "production"
 set :rack_env, "production"
 set :nginx_server_name, 'bottlelivesmatter.com'
+set :delayed_job_pid_dir, '/tmp'
 
 server '138.197.68.79',
   user: 'railsdev',

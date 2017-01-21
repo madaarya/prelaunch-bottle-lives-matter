@@ -43,5 +43,15 @@ Prelaunchr::Application.configure do
   # For mailer configs
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => ENV['DEFAULT_MAILER_HOST'] }
+  config.action_mailer.default_url_options = "http://localhost:3000"
+
+  config.action_mailer.delivery_method = :smtp
+
+  config.action_mailer.smtp_settings = {
+    :address => "smtp.sendgrid.net",
+    :port => 587,
+    :user_name => 'emanueltestemail',
+    :password => 'HQwcH3KvFqVNFcNA',
+    :authentication => :plain,
+    :enable_starttls_auto => true }
 end

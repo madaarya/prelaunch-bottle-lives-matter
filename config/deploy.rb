@@ -26,7 +26,7 @@ set :repo_url, 'git@bitbucket.org:conicapps-team/bottle-lives-matter.git'
 set :linked_files, %w{config/database.yml config/secrets.yml .env.production}
 
 # Default value for linked_dirs is []
-# set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -35,7 +35,6 @@ set :linked_files, %w{config/database.yml config/secrets.yml .env.production}
 set :keep_releases, 3
 
 namespace :deploy do
-
   task :upload_yml do
     on roles(:app) do
       execute "mkdir -p #{shared_path}/config"
@@ -44,5 +43,16 @@ namespace :deploy do
       upload! StringIO.new(File.read("config/secrets.yml")), "#{shared_path}/config/secrets.yml"
     end
   end
+end
 
+
+namespace :unicorn do
+  %w[start stop restart reload].each do |command|
+    desc "#{command} unicorn"
+    task command do
+      on roles :app do
+        execute "sudo service #{fetch(:unicorn_service)} #{command}"
+      end
+    end
+  end
 end
