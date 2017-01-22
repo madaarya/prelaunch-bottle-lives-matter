@@ -5,7 +5,7 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 
 require 'capistrano/unicorn_nginx'
-require 'capistrano/delayed-job'
+require 'capistrano/delayed_job'
 # Includes tasks from other gems included in your Gemfile
 #
 # For documentation on these, see for example:
