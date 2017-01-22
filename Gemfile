@@ -11,6 +11,7 @@ gem 'rails', '4.2.5.2'
 gem 'unicorn'
 gem 'therubyracer',  platforms: :ruby
 gem "dotenv-rails"
+gem "delayed_job_web"
 
 
 # Gems used only for assets and not required
@@ -35,7 +36,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rvm'
   gem 'capistrano-unicorn-nginx', github: 'madaarya/capistrano-unicorn-nginx'
-  gem 'capistrano3-delayed-job', '~> 1.0'
+  gem 'capistrano-delayed-job', '~> 1.0'
 end
 
 # To use ActiveModel has_secure_password

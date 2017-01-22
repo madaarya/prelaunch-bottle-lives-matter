@@ -10,6 +10,8 @@ Prelaunchr::Application.routes.draw do
   get 'refer-a-friend' => 'users#refer'
   get 'privacy-policy' => 'users#policy'
 
+  match "/delayed_job" => DelayedJobWeb, :anchor => false, via: [:get, :post]
+
   unless Rails.application.config.consider_all_requests_local
     get '*not_found', to: 'users#redirect', :format => false
   end
