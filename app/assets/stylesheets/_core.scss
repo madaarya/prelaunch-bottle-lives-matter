@@ -28,10 +28,10 @@ html.home{
 	margin: 0 auto;
 }
 
-#home .hero{
+#home .bottle{
 	width: 100%;
 	height: 446px;
-	background: image-url("home/hero.jpg") 100% center no-repeat;
+	background: image-url("home/bottle.png") 100% center no-repeat;
 	background-size: 100% 100%;
 	overflow: hidden;
 	position: relative;
@@ -39,7 +39,7 @@ html.home{
 	margin: 0 auto;
 }
 
-#home .hero .large{
+#home .bottle .large{
 	font-weight: bold;
 	font-size: 40px;
 	color: #074E6F;
@@ -50,7 +50,7 @@ html.home{
 	letter-spacing: 2px;
 }
 
-#home .hero .small{
+#home .bottle .small{
 	font-weight: bold;
 	color: #955F5D;
 	font-size: 18px;
@@ -285,23 +285,23 @@ html.home{
 	margin-top: 15px;
 }
 
-#refer .hero{
+#refer .bottle{
 	background: #F1F0EE;
 	height: 391px;
 	overflow: hidden;
 }
 
-#refer .mammoth{
+#refer .bottlelives{
 	width: 612px;
 	height: 394px;
-	background: image-url("refer/mammoth.png") 0 0 no-repeat;
+	background: image-url("refer/bottlelives.png") 0 0 no-repeat;
 	background-size: 610px 394px;
 	overflow: hidden;
 	margin-top: 15px;
 	float: left;
 }
 
-#refer .mammoth .need{
+#refer .bottlelives .need{
 	color: #FFF;
 	font-size: 38px;
 	text-transform: uppercase;
@@ -615,8 +615,9 @@ html.home{
 only screen and (-o-min-device-pixel-ratio: 2/1),
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
-	#home .hero{
-		background: image-url("home/hero@2x.jpg") center center no-repeat;
+
+	#home .bottle{
+		background: image-url("home/bottle@2x.png") center center no-repeat;
 		background-size: 1600px 446px;
 	}
 
@@ -630,8 +631,8 @@ only screen and (min-device-pixel-ratio: 2) {
 		background-size: 106px 19px;
 	}
 
-	#refer .mammoth{
-		background: image-url("refer/mammoth@2x.png") 0 0 no-repeat;
+	#refer .bottlelives{
+		background: image-url("refer/bottlelives@2x.png") 0 0 no-repeat;
 		background-size: 610px 394px;
 	}
 
