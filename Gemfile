@@ -8,10 +8,12 @@ gem 'daemons'
 gem 'devise'
 gem 'pg'
 gem 'rails', '4.2.5.2'
+gem 'jquery-rails'
 gem 'unicorn'
 gem 'therubyracer',  platforms: :ruby
 gem "dotenv-rails"
 gem "delayed_job_web"
+gem "gritter", "1.2.0"
 
 
 # Gems used only for assets and not required

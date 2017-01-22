@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       redirect_to '/refer-a-friend'
     else
       logger.info("Error saving user with email, #{email}")
-      redirect_to root_path, alert: 'Something went wrong!'
+      redirect_to root_path, :gflash => { :error => { :value => "Something went wrong!" } }
     end
   end
 
@@ -36,7 +36,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.nil?
-        format.html { redirect_to root_path, alert: 'Something went wrong!' }
+        format.html { redirect_to root_path, :gflash => { :error => { :value => "Something went wrong!" } } }
       else
         format.html # refer.html.erb
       end
@@ -67,7 +67,6 @@ class UsersController < ApplicationController
     # Prevent someone from gaming the site by referring themselves.
     # Presumably, users are doing this from the same device so block
     # their ip after their ip appears three times in the database.
-
     address = request.env['HTTP_X_FORWARDED_FOR']
     return if address.nil?
 
@@ -77,7 +76,8 @@ class UsersController < ApplicationController
     elsif current_ip.count > 2
       logger.info('IP address has already appeared three times in our records.
                  Redirecting user back to landing page.')
-      return redirect_to root_path
+      return redirect_to root_path, :gflash => { :error => { :value => "Sorry, IP address has already appeared three times in our records.
+                 Redirecting user back to landing page." } }
     else
       current_ip.count += 1
       current_ip.save
