@@ -24,7 +24,7 @@ class UsersController < ApplicationController
       redirect_to '/refer-a-friend'
     else
       logger.info("Error saving user with email, #{email}")
-      redirect_to root_path, :gflash => { :error => { :value => "Something went wrong!" } }
+      redirect_to root_path, :gflash => { :error => { :value => @user.errors.full_messages.first } }
     end
   end
 
