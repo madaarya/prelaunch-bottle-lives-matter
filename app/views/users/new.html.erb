@@ -1,12 +1,34 @@
-<div class="bottle">
- <!--  <p class="large brandon">Harry&#8217;s is live</p>
-  <p class="small brandon">Respecting the Face and Wallet<br>Since Like...Right Now.</p> -->
-</div>
-
-<div class="form-wrap clearfix <%= "ended" if Rails.application.config.ended %>">
-  <% if Rails.application.config.ended %>
-    <%= render "users/campaign_ended" %>
-  <% else %>
-    <%= render "users/campaign_ongoing" %>
-  <% end %>
+<div id="wrapper">
+  <header id="header">
+    <div class="container-fluid">
+      <div class="max-container">
+        <div class="col-xs-12">
+          <div class="row">
+            <strong class="logo">
+              <%= image_tag "bottle_lives_matter/logo.png", alt: "BottleLivesMatter" %>
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <div class="container-fluid">
+      <div class="max-container">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="text">
+              <p>100% re-used bottled water company</p>
+              <a class="be-first" href="#">Be the first to know</a>
+              <%= form_for @user, :url => { :action => "create" }, html: {class: "email-form"} do |f| %>
+                <%= f.email_field :email, :placeholder => "Enter Email", :class => "form-control", required: true %>
+                <input class="btn btn-submit" name="commit" type="submit" value="Step Inside" />
+              <% end %>
+              <p>Because it's smarter to save a life than to manufacture a life.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </div>
