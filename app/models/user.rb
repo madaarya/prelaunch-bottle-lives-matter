@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   validates :referral_code, uniqueness: true
 
   before_create :create_referral_code
-  after_create :send_welcome_email
+  after_create :send_welcome_email, :upload_to_sendgrid
 
   REFERRAL_STEPS = [
     {
@@ -44,6 +44,16 @@ class User < ActiveRecord::Base
 
   def create_referral_code
     self.referral_code = UsersHelper.unused_referral_code
+  end
+
+  def upload_to_sendgrid
+    headers = {'Authorization' => "Bearer #{ENV['SENDGRID_API_KEY']}"}
+    data = {:email => self.email}
+    response = RestClient.post 'https://api.sendgrid.com/v3/contactdb/recipients', [data].to_json, headers
+    if response.code == 201
+      self.uploaded_sendgrid = true
+      self.save
+    end
   end
 
   def send_welcome_email
