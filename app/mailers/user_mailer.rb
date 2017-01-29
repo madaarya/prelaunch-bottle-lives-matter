@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "Bottle Lives Matter"
+  default from: "Bottle Lives Matter <notification@bottlelivesmatter.us>"
 
   def signup_email(user)
     @user = user
