@@ -47,7 +47,7 @@ class User < ActiveRecord::Base
   end
 
   def upload_to_sendgrid
-    headers = {'Authorization' => "Bearer #{ENV['SENDGRID_API_KEY']}"}
+    headers = {'Authorization' => "Bearer #{ENV['SENDGRID_API_KEY_PRODUCTION']}"}
     data = {:email => self.email}
     response = RestClient.post 'https://api.sendgrid.com/v3/contactdb/recipients', [data].to_json, headers
     if response.code == 201
