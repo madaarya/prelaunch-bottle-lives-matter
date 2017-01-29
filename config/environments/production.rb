@@ -60,11 +60,11 @@ Prelaunchr::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = "http://prelauncher.bottlelivesmatter.us"
+  config.action_mailer.default_url_options = "http://prelaunch.bottlelivesmatter.us"
 
   config.action_mailer.delivery_method = :smtp
 
-  config.action_mailer.asset_host = "http://prelauncher.bottlelivesmatter.us"
+  config.action_mailer.asset_host = "http://prelaunch.bottlelivesmatter.us"
 
   config.action_mailer.smtp_settings = {
     :address => "smtp.sendgrid.net",
