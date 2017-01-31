@@ -9,105 +9,105 @@
 %>
 
 <div id="wrapper">
-    <div class="thankyou">
-      <div class="container-fluid">
-        <div class="max-container">
-          <div class="col-xs-12">
-            <div class="row">
-              <p>Thank you for signing up</p>
+  <div class="thankyou">
+    <div class="container-fluid">
+      <div class="max-container">
+        <div class="col-xs-12">
+          <div class="row">
+            <p>Thank you for signing up</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main id="main">
+    <div class="align-left">
+      <div class="wrap-area">
+        <div class="video-area">
+          <strong class="title">Watch The Video</strong>
+          <div class="video-holder">
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/JaF-fq2Zn7I" frameborder="0" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="text-holder">
+          <div class="text-frame">
+            <strong class="title">How It Works</strong>
+            <p>Top 2 users with most people referred using our Bottle Lives Matter branded sharable social media links to the prelaunch site get a year free supply of bottled water.</p>
+            <span class="ship">We ship to the U.S. (&amp; Canada Soon)</span>
+            <span class="privacy"><a href="/privacy-policy" target="_blank">Privacy Policy</a></span>
+          </div>
+          <div class="img-holder">
+            <%= image_tag "bottle_lives_matter/img-02.png", alt: "image description" %>
+          </div>
+          <div class="mob">
+            <div class="txt">
+              <strong class="title">Don’t leave your friends behind</strong>
+              <strong class="sub-title">INVITE FRIENDS <span>&amp; Earn Product</span></strong>
+              <p>Share your unique link via email, Facebook or Twitter and earn Bottle Lives Matter goods for each friend who signs up.</p> 
             </div>
           </div>
         </div>
       </div>
     </div>
-    <main id="main">
-      <div class="align-left">
-        <div class="wrap-area">
-          <div class="video-area">
-            <strong class="title">Watch The Video</strong>
-            <!-- <div class="video-holder">
-              <a href="#">
-                <span class="btn-play">Play</span>
-                <%#= image_tag "bottle_lives_matter/img-01.jpg", alt: "video description" %>
-              </a>
-            </div> -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/JaF-fq2Zn7I" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="text-holder">
-            <div class="text-frame">
-              <strong class="title">How It Works</strong>
-              <p>Top 2 users with most people referred using our Bottle Lives Matter branded sharable social media links to the prelaunch site get a year free supply of bottled water.</p>
-              <div class="mobileOnly">
-                <div class="img-holder img1">
-                  <%= image_tag "bottle_lives_matter/img-02.png", alt: "image description" %>
-                </div>
-              </div>
-              <span class="ship">We ship to the U.S. (&amp; Canada Soon)</span>
-              <span class="privacy"><a href="/privacy-policy" target="_blank">Privacy Policy</a></span>
-            </div>
-            <div class="img-holder img1">
-              <%= image_tag "bottle_lives_matter/img-02.png", alt: "image description" %>
-            </div>
-            <div class="mob">
-              <div class="txt">
-                <strong class="title">Don’t leave your friends behind</strong>
-                <strong class="sub-title">INVITE FRIENDS <span>&amp; Earn Product</span></strong>
-                <p>Share your unique link via email, Facebook or Twitter and earn Bottle Lives Matter goods for each friend who signs up.</p> 
-              </div>
-              <div class="mobileOnly1">
-                <div class="txt">
-                  <div class="link2" href="<%= root_url %>?ref=<%= @user.referral_code %>" target="_blank">
-                    <%= root_url %>?ref=<%= @user.referral_code %>
-                  </div>
-                    <ul class="share">
-                      <li>Share on:</li>
-                      <li>
-                        <ul>
-                          <li><a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=BottleLivesMatter" target="_blank"><%= image_tag "bottle_lives_matter/ico-facebook.png", alt: "facebook" %></a></li>
-                          <li>OR</li>
-                          <li><a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><%= image_tag "bottle_lives_matter/ico-twitter.png", alt: "twitter" %></a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="align-right">
-        <div class="frame">
-          <div class="txt">
+    <div class="align-right">
+      <div class="frame">
+        <div class="txt">
+          <div class="desktop">
             <strong class="title">Don’t leave your friends behind</strong>
             <strong class="sub-title">INVITE FRIENDS <span>&amp; Earn Product</span></strong>
             <p>Share your unique link via email, Facebook or Twitter and earn Bottle Lives Matter goods for each friend who signs up.</p>
-            <div class="link" href="<%= root_url %>?ref=<%= @user.referral_code %>" target="_blank">
-              <%= root_url %>?ref=<%= @user.referral_code %>
-            </div>
-            <ul class="share">
-              <li>Share on:</li>
-              <li>
-                <ul>
-                  <li><a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=BottleLivesMatter" target="_blank"><%= image_tag "bottle_lives_matter/ico-facebook.png", alt: "facebook" %></a></li>
-                  <li>OR</li>
-                  <li><a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank"><%= image_tag "bottle_lives_matter/ico-twitter.png", alt: "twitter" %></a></li>
-                </ul>
-              </li>
-            </ul>
           </div>
-          <div class="stats-area statsmargin">
-            <strong class="title">My Stats</strong>
-            <div class="stats-holder">
-              <div class="stats-box">
-                <strong>Total Friends Joined</strong>
-                <ul>
-                  <li><i><%= image_tag "bottle_lives_matter/ico-user.png", alt: "friend shared count" %></i> <span><%= referrals_count %></span></li>
-                </ul>
-              </div>
-            </div>
-            <p>Current Top user <%= current_shared %> - share to more friends to become the Top user.</p>
+          <div class="link-holder">
+            <a class="link" href="<%= root_url %>?ref=<%= @user.referral_code %>" target="_blank"><%= root_url %>?ref=<%= @user.referral_code %></a>
           </div>
+          <ul class="share">
+            <li>Share on:</li>
+            <li>
+              <ul>
+                <li>
+                  <a href="http://www.facebook.com/sharer/sharer.php?u=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&title=BottleLivesMatter" target="_blank">
+                    <%= image_tag "bottle_lives_matter/ico-facebook.png", alt: "facebook" %>    
+                  </a>
+                </li>
+                <li>
+                  <a href="http://twitter.com/share?url=<%= CGI::escape(root_url) %>?ref=<%= CGI::escape(@user.referral_code) %>&text=<%= CGI::escape(twitter_message) %>" target="_blank">
+                    <%= image_tag "bottle_lives_matter/ico-twitter.png", alt: "twitter" %>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://musical.ly/" target="_blank">
+                    <%= image_tag "bottle_lives_matter/ico-musically.png", alt: "musically" %>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.snapchat.com/add/yourUserName" target="_blank">
+                    <%= image_tag "bottle_lives_matter/ico-snapchat.png", alt: "snapchat" %>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://pinterest.com/pin/create/button/?url=<%= CGI::escape(root_url) %>&amp;media=<%= asset_url('bottle_lives_matter/logo.png') %>&amp;description=WeCanEndPollution" target="_blank">
+                    <%= image_tag "bottle_lives_matter/ico-pinterest.png", alt: "pinterest" %>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="stats-area">
+          <strong class="title">My Stats</strong>
+          <div class="stats-holder">
+            <div class="stats-box">
+              <strong>Total Friends Joined</strong>
+              <ul>
+                <li><i><%= image_tag "bottle_lives_matter/ico-user.png", alt: "friend shared count" %></i> <span><%= referrals_count %></span></li>
+              </ul>
+            </div>
+          </div>
+          <p>Current Top user <%= current_shared %> that has joined - share to more friends to become the Top user.</p>
         </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </main>
+</div>

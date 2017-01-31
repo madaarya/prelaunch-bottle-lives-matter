@@ -16,6 +16,7 @@ gem "delayed_job_web"
 gem "gritter", "1.2.0"
 gem 'bootstrap-sass'
 gem 'rest-client'
+gem "mediaelement_rails"
 
 
 # Gems used only for assets and not required

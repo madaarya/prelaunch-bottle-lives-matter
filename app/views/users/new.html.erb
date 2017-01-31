@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "mediaelement_rails" %>
 <div id="wrapper">
   <header id="header">
     <div class="container-fluid">
@@ -17,22 +18,35 @@
       <div class="max-container">
         <div class="col-xs-12">
           <div class="row">
-            <div class="text">
+            <div class="text inner">
               <p>100% RE-USED BOTTLED WATER COMPANY.</p>
-              <p>Pollution killed 7 million people last year.</p>
-              <p>More than ISIS and Mexican cartels.</p>
-              <p>#WeCanEndPollution.</p>
-              <p>"What is happening right now is disastrous! Pollution is killing 7 million people a year! Pollution is the biggest killer!"  The Terminator, Arnold Schwarzenegger.</p>
               <a class="be-first" href="#">Be the first to know</a>
+              <section class="section">
+                <div class="img-holder">
+                  <%= image_tag "bottle_lives_matter/img-03.png", alt: "#WeCanEndPollution" %>
+                </div>
+                <div class="txt">
+                  <p>Pollution killed 7 million people last year. More than ISIS and Mexican cartels.</p>
+                  <span>#WeCanEndPollution</span>
+                </div>
+              </section>
               <%= form_for @user, :url => { :action => "create" }, html: {class: "email-form"} do |f| %>
                 <%= f.email_field :email, :placeholder => "Enter Email", :class => "form-control", required: true %>
                 <input class="btn btn-submit" name="commit" type="submit" value="Step Inside" />
               <% end %>
-              <audio controls>
-                <source src="<%= asset_path('arnoldAudio.mp3') %>" type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-              <p>Because it's smarter to save a life than to manufacture a life.</p>
+              <audio src="<%= asset_path('arnoldAudio.mp3') %>"></audio>
+
+              <section class="section">
+                <div class="img-holder">
+                  <%= image_tag "bottle_lives_matter/img-04.png", alt: "Arnold Schwarzenegger" %>
+                </div>
+                <div class="txt">
+                  <p>What is happening right now is disastrous! Pollution is killing 7 million people a year! Pollution is the biggest killer!" </p>
+                  <span>The Terminator, Arnold Schwarzenegger.</span>
+                </div>
+              </section>
+              <p>Because it's smarter to save a life than <br> to manufacture a life.</p>
+
             </div>
           </div>
         </div>

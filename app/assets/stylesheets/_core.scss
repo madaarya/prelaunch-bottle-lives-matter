@@ -61,6 +61,9 @@ body {
   margin: 0 auto;
   letter-spacing: 3px;
   padding: 0 0 30px;
+  &.inner {
+    max-width: 931px;
+  }
   p {
     text-transform: uppercase;
     margin: 0 0 43px;
@@ -100,7 +103,7 @@ body {
   }
   input {
     &[type="email"] {
-      width: 71.2%;
+      width: 69%;
       display: inline-block;
       vertical-align: top;
       background: #efefef;
@@ -118,16 +121,12 @@ body {
       color: #fff;
       text-transform: uppercase;
       height: 71px;
-      margin: 0 0 0 8px;
-      width: 26.4%;
+      margin: 0 0 0 0px;
+      width: 29%;
       font-size: 18px;
       letter-spacing: 2px;
     }
   }
-}
-
-.mobileOnly, .mobileOnly1 {
-  display: none;
 }
 
 .thankyou {
@@ -150,6 +149,7 @@ body {
 .wrap-area {
   float: right;
   max-width: 1000px;
+  border-right: 1px solid #e5e5e5;
 }
 
 .video-area {
@@ -185,7 +185,7 @@ body {
     left: 50%;
     top: 50%;
     z-index: 1;
-    background: image-url("bottle_lives_matter/btn-play.png") no-repeat;
+    background: url(../images/btn-play.png) no-repeat;
     width: 128px;
     height: 128px;
     margin: -64px 0 0 -64px;
@@ -251,7 +251,6 @@ body {
   float: left;
   max-width: 1000px;
   padding: 50px 0 0;
-  border-left: 1px solid #addbe8;
 }
 
 .sub-title {
@@ -276,44 +275,59 @@ body {
   padding: 0 30px;
 }
 
-.mob .txt p, .frame .txt p, .text2 {
+.mob .txt p {
   margin: 0 0 40px;
   font-size: 18px;
   line-height: 30px;
   letter-spacing: 2px;
 }
 
-.frame .link, .link2 {
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: top;
-  color: #0095c1;
-  font-size: 18px;
-  line-height: 24px;
-  border: 1px solid #0095c1;
-  background: #efefef;
-  padding: 19px 45px 25px 25px;
-  transition: all ease 0.5s;
-  margin: 0 0 50px;
-}
-
-.frame .link:hover {
-  border: 1px solid #d5d5d5;
+.frame {
+  .txt p {
+    margin: 0 0 40px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 2px;
+  }
+  .link-holder {
+    border: 1px solid #0095c1;
+    background: #efefef;
+    padding: 19px 45px 25px 25px;
+    transition: all ease 0.5s;
+    margin: 0 0 50px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .link {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: top;
+    color: #0095c1;
+    transition: all ease 0.5s;
+  }
+  .link-holder:hover {
+    background: #0095c1;
+    .link {
+      color: #fff;
+    }
+  }
 }
 
 .txt .share {
-  padding: 0 0 30px;
+  padding: 0 0 20px;
   font-size: 18px;
   letter-spacing: 2px;
   li {
     display: inline-block;
     vertical-align: middle;
-    padding: 0 10px;
+    padding: 0 10px 10px;
   }
   ul {
     padding: 0;
     li {
-      padding: 0 10px;
+      padding: 0 10px 10px;
     }
   }
 }
@@ -322,13 +336,6 @@ body {
   background: #e5e5e5;
   padding: 50px 30px 20px;
   position: relative;
-}
-
-.statsmargin {
-  padding-bottom: 27px;
-}
-
-.stats-area {
   &:after {
     position: absolute;
     left: 100%;
@@ -347,9 +354,6 @@ body {
     float: left;
     width: 50%;
     padding-bottom: 50px;
-    &:first-child {
-      // border-right: 1px solid #cecece;
-    }
     + .stats-box {
       padding-left: 25px;
     }
@@ -385,6 +389,102 @@ body {
   line-height: 30px;
 }
 
+.section {
+  text-align: left;
+  background: #f2f3f4;
+  padding: 30px;
+  border: 1px solid #e4e5e5;
+  margin: 0 0px 50px 0;
+  + .section {
+    margin-bottom: 60px;
+  }
+  .img-holder {
+    display: inline-block;
+    vertical-align: middle;
+    width: 200px;
+    margin: 0 28px 0 0;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .txt {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70%;
+    p {
+      color: #333;
+      margin: 0 0 25px;
+      font-size: 24px;
+      line-height: 29px;
+      text-transform: none;
+    }
+    span {
+      display: block;
+      color: #0095c1;
+    }
+  }
+}
+
+.mejs-container .mejs-controls {
+  height: 71px !important;
+  background: #333 !important;
+  .mejs-time {
+    padding-top: 19px !important;
+  }
+  .mejs-time-rail {
+    padding-top: 24px !important;
+  }
+  .mejs-time {
+    padding-top: 28px !important;
+  }
+  .mejs-button, .mejs-horizontal-volume-slider {
+    padding-top: 19px !important;
+  }
+}
+
+.mejs-controls .mejs-horizontal-volume-slider {
+  .mejs-horizontal-volume-current, .mejs-horizontal-volume-total {
+    top: 29px !important;
+  }
+}
+
+.mejs-container {
+  margin: 0 0 30px 0px;
+  width: 100% !important;
+}
+
+.mejs-controls {
+  .mejs-time-rail {
+    span {
+      height: 1px !important;
+      margin: 5px 0 0;
+    }
+    .mejs-time-current {
+      background: #0095c1 !important;
+      &:after {
+        position: absolute;
+        right: 0;
+        top: 0;
+        content: '';
+        width: 29px;
+        height: 29px;
+        background: #0095c1;
+        border-radius: 100%;
+        margin: -15px -16px 0 0;
+        display: none;
+      }
+    }
+  }
+  .mejs-horizontal-volume-slider .mejs-horizontal-volume-total, .mejs-time-rail .mejs-time-loaded {
+    background: #fff !important;
+  }
+  .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background: #0095c1 !important;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .text-holder .img-holder {
     max-width: 34%;
@@ -411,7 +511,7 @@ body {
 }
 
 @media only screen and (max-width: 992px) {
-  .frame .link {
+  .frame .link-holder {
     padding: 19px 15px 25px;
     font-size: 16px;
   }
@@ -424,6 +524,16 @@ body {
   .stats-box ul li {
     margin: 0 5px 5px;
   }
+  .section {
+    margin: 0 0 30px;
+    .txt {
+      width: 60%;
+    }
+  }
+  .mejs-container {
+    margin: 0 0 30px;
+    width: 100% !important;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -433,15 +543,6 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
-  .mobileOnly, .mobileOnly1, .mobileOnly .img-holder {
-    display: block;
-  }
-  .text-holder .img-holder img {
-    width: auto;
-  }
-  .img-holder {
-    display: none;
-  }
   .logo {
     margin: 80px auto 25px;
   }
@@ -477,25 +578,19 @@ body {
     font-size: 20px;
     line-height: 22px;
     margin: 0 0 20px;
-    font-weight: bold;
   }
   .sub-title {
     font-size: 20px;
     line-height: 22px;
     margin: 0 0 20px;
-    font-weight: bold;
     span {
       display: inline;
     }
   }
-  .mob .txt {
-    padding: 25px 0 0;
-  }
   .frame {
     padding: 25px 0 0;
-    .txt {
+    .desktop {
       display: none;
-      padding: 0 0px;
     }
   }
   .video-holder .btn-play {
@@ -549,5 +644,27 @@ body {
         border-top: 1px solid #cecece;
       }
     }
+  }
+  .section {
+    padding-top: 15px;
+    .img-holder {
+      display: block;
+      margin: 0 auto 20px;
+    }
+    .txt {
+      display: block;
+      width: 100%;
+      text-align: center;
+      p, span {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    + .section {
+      margin-bottom: 30px;
+    }
+  }
+  .text.inner p ~ p br {
+    display: none;
   }
 }
