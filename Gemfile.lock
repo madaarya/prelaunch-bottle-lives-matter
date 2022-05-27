@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/madaarya/capistrano-unicorn-nginx.git
+  remote: https://github.com/madaarya/capistrano-unicorn-nginx.git
   revision: d428035a5cc62f76c059219cf69f8709d6563cf8
   specs:
     capistrano-unicorn-nginx (4.0.0)
@@ -179,7 +179,7 @@ GEM
       slop (~> 3.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
-    rack (1.6.4)
+    rack (1.6.13)
     rack-protection (1.5.3)
       rack
     rack-test (0.6.3)
