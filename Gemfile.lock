@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/madaarya/capistrano-unicorn-nginx.git
+  remote: https://github.com/madaarya/capistrano-unicorn-nginx.git
   revision: d428035a5cc62f76c059219cf69f8709d6563cf8
   specs:
     capistrano-unicorn-nginx (4.0.0)
@@ -133,7 +133,8 @@ GEM
       activesupport (>= 3.2, < 5)
     http-cookie (1.0.3)
       domain_name (~> 0.5)
-    i18n (0.7.0)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
       has_scope (~> 0.6.0.rc)
