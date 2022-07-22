@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/madaarya/capistrano-unicorn-nginx.git
+  remote: https://github.com/madaarya/capistrano-unicorn-nginx.git
   revision: d428035a5cc62f76c059219cf69f8709d6563cf8
   specs:
     capistrano-unicorn-nginx (4.0.0)
@@ -273,9 +273,9 @@ GEM
       libv8 (~> 3.16.14.15)
       ref
     thor (0.19.1)
-    thread_safe (0.3.5)
+    thread_safe (0.3.6)
     tilt (2.0.2)
-    tzinfo (1.2.2)
+    tzinfo (1.2.10)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
